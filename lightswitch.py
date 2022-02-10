@@ -1,13 +1,28 @@
-import tkinter as tk
-window = tk.Tk()
+from tkinter import *
 
-button = tk.Button(text='...', bg="white", fg="black")
-button.pack(pady = 20, padx = 20)
+toggle = Tk()
 
-# schijf hier tussen je code
+toggle.title("Theme Toggle")
+
+toggle.geometry("400x500")
+
+def black():
+    toggle.config(bg="#000000")
+
+def white():
+    toggle.config(bg="#ffffff")
 
 
 
-# schijf hier tussen je code
+btn1 = Button(toggle, text="black",command=black)
+btn1.pack()
 
-window.mainloop()
+btn2 = Button(toggle, text="white",command=white)
+btn2.pack()
+
+
+
+
+
+
+toggle.mainloop()
